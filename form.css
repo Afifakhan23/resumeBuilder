@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#a55eea;
+    --secondary-color:#d1d8e0;
+    --white:#fff;
+    --blue:#3B3B98;
+}
+body {
+    font-family: 'Lucida Bright', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    margin: 0px auto;
+    color: var(--white);
+    background-color: var(--main-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color:black;
+    font-size: 35px;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.section:hover {
+    border: 2px solid var(--secondary-color);
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--blue);
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    font-size: 18px;
+    color: var(--white);
+}
+
+input ,textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #dff9fb;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+}
+.designation1, .designation2,.designation3{
+    width: 32%;
+}
+input:focus ,textarea:focus{
+    outline: none;
+    border: 2px solid var(--blue);
+    background-color: var(--white);
+}
+
+select ,#duration {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #dff9fb;
+    cursor: pointer;
+}
+.select{
+    display: flex;
+    justify-content: space-between;
+}
+
+#year1, #year2{
+    width: 48%;
+}
+#duration{
+    width: 100%;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-btn, .reset-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover, .reset-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+.name:after, .email:after,.degree:after{
+    content:" *";
+    color: red;
+}
+/* use media Query */
+@media only screen and (max-width: 850px) {
+    .container {
+        max-width: 80%;
+    }
+    .submit-btn, .reset-btn{
+        padding: 8px 10px;
+        font-size: 15px;
+    }
+    .designation1,.designation2,.designation3{
+        width: 100%;
+    }
+    input,textarea,select{
+        font-size: 13px;
+    }
+}
+/* Let's Create a resume */
+
+#resume-display{
+    display: none;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+.container2 {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+}
+
+.container2:hover {
+    transform: scale(1.02);
+}
+
+#resume-display h1{
+    margin-top: 30px;
+    font-size: 2.5em;
+    color: #007bff;
+}
+#resume-display h2{
+    font-size: 1.5em;
+    color: #6c757d;
+}
+.container2 h3{
+    font-size: 1.8em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    color: #007bff;
+}
+.container2 p, li {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+.container2 h4{
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.container2 header {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.container2 section {
+    margin: 20px 0;
+}
+.container2 ul {
+    list-style: none;
+    padding: 0;
+} 
+li::before {
+    content: '✔';
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.contact ul li {
+    margin: 5px 0;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.btn{
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.btn:hover{
+    background-color: #65aaf3;
+}
+/* use media Query on resume*/
+@media only screen and (max-width: 850px) {
+    .container2 {
+        max-width: 80%;
+    }
+    .btn{
+        padding: 8px 4px;
+        font-size: 15px;
+    }
+    .img img{
+        width: 100px;
+        height: 100px;
+    }
+    .container2 header{
+        flex-direction: column;
+    }
+}
