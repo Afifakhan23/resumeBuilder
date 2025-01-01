@@ -1,4 +1,4 @@
-Dynamic Resume Builder
+#Dynamic Resume Builder
 
 A web application that allows users to create personalized resumes. The application is built with HTML, CSS, and TypeScript, offering an interactive and user-friendly interface for generating resumes with a dynamic skill section, allowing users to add and remove skills as needed.
 
