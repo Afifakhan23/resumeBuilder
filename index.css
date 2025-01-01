@@ -3,9 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+.loader{
+    background:#FCFEFC url(loader.gif) no-repeat center;
+    background-size: 25%;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+}
 header{
-    height: 80px;
-    background-color: #47879e;
+    height: 60px;
+    background-color: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -16,17 +24,20 @@ header{
     cursor: pointer;
     font-size: 30px;
 }
-.logo::before{
+.logo::before,h1::before{
     content: "";
     position: absolute;
     top: 0;
     right:0;
-    background-color: #47879e;
+    background-color: #fff;
     width: 100%;
     height: 100%;
     animation: show 1s ease forwards;
     animation-delay: 4s;
     -webkit-animation: show 2s ease forwards;
+}
+h1::before{
+    background-color: #F7F9FC;
 }
 .list ul{
     display: flex;
@@ -35,41 +46,34 @@ li{
     margin-left: 20px;
     list-style: none;
 }
-ul li a:hover{
-    color: black;
-}
 a{
     text-decoration: none;
-    color: white;
-    font-size: 25px;
+    color: #3e4851;
+    font-size: 22px;
+}
+ul li a:hover{
+    color: #282b85;
 }
 main{
-    background-color:silver;
+    background-color: #F7F9FC;
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-.pic{
-    width: 450px;
-    height: 450px;
+.s-text{
+    color: #ffaf40;
+    font-weight: bold;
+
 }
 h1{
-    font-size: 60px;
+    color: #282B8F;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 10px;
+    width: 400px;
     position: relative;
-}
-h1::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right:0;
-    background-color: silver;
-    width: 100%;
-    height: 100%;
-    animation: show 1s ease forwards;
-    animation-delay: 4s;
-    -webkit-animation: show 2s ease forwards;
 }
 button{
     cursor: pointer;
@@ -77,36 +81,50 @@ button{
     text-align: center;
     font-size: 25px;
     margin-top: 20px;
+}
+.btn1{
+    background-color: #3B82F6;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.btn2{
+    background-color: transparent;
+    padding: 10px 8px;
+    border: 2px solid #2563EB;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.btn1:hover{
+    /* color: black; */
+    background:#2563EB;
+}
+.btn2:hover{
+    color: #2563EB;
+}
+.pic{
+    width: 450px;
+    height: 400px;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
+    cursor: pointer;
+    flex-wrap: wrap;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-}
-.btn1{
-    background-color: #465BB5;
-    color: white;
-    padding: 15px 45px;
-    border: 2px solid transparent;
-
-}
-.btn2{
-    background-color: transparent;
-    padding: 15px 30px;
-    border: 2px solid #47879e;
-}
-.btn1:hover{
-    color: black;
-    background:#6876b3;
-}
-.btn2:hover{
-    color: #47879e;
-}
-img{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    flex-wrap: wrap;
+    box-shadow: 10px 10px 10px #95afc0;
 }
 footer{
     background-color: #47879e;
@@ -125,6 +143,67 @@ footer{
     100%{
         width: 0;
     }
+}
+
+/* company */
+.about{
+    padding: 30px 0px;
+}
+h3{
+    color: #1B1464;
+    text-align: center;
+    font-size: 30px;
+}
+.company{
+    display: flex;
+    justify-content: center;
+}
+.company li{
+    width: 130px;
+    height: 130px;
+    /* background-size: cover; */
+    margin: 20px 20px;
+}
+.company li img{
+    /* background-color: #ffaf40; */
+    width: 130px;
+    height: 100%;
+    background-size: cover;
+}
+
+/* feature */
+.feature{
+    /* background-color: #ffaf40; */
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.font{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.feature li {
+    width: 300px;
+    background-color: #d2e0ea;
+    padding: 10px;
+}
+.feature li:hover {
+    background-color: #b8cfde;
+}
+.feature li p{
+    font-size: 20px;
+    margin: 20px 0px;
+}
+h4{
+    font-size: 25px;
+    color: #282B8F;
+}
+.time{
+    background-color: #ffaf40;
+}
+.free{
+    background-color: chartreuse;
 }
 /* use media Query */
 @media only screen and (max-width: 1043px) {

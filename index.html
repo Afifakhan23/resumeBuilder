@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Resume Builder Website</title>
+    <title>ResumeFolio Website</title>
 </head>
 <body>
+    <div class="loader" id="loader"></div>
     <header>
         <div class="nav">
-            <a href="/" class="logo">Resume Builder</a>
+            <a href="/" class="logo">ResumeFolio
+            </a>
         </div>
         <div class="list">
             <ul>
@@ -18,19 +20,52 @@
                 <li><a href="">Contact Us</a></li>
             </ul>
         </div>
+        <div class="button">
+            <a href="/" class="btn1">Create Resume</a>
+        </div>
     </header>
     <main>
         <div class="wrapper">
-            <h1>Generate Your Resume</h1>
+            <p class="s-text">
+                START BUILDING YOUR CAREER
+            </p>
+            <h1>Your Dream Job Starts with a Perfect Resume</h1>
             <a href="form.html"><button class="btn1">Click Here To Generate Resume</button></a>
             <a href="myResume.html"><button class="btn2">Click Here To See Sample Resume</button></a>
         </div>
         <div class="pic">
-            <img src="resume.png" alt="resume pic">
+            <img src="/Image/resumes-desk.jpg" alt="resume pic">
         </div>
     </main>
+    <div class="about">
+        <h3>Our users are now professionals at:</h3>
+        <ul class="company">
+            <li><img src="/Image/ibm.png" alt="ibm"></li>
+            <li><img src="/Image/google.png" alt="google"></li>
+            <li><img src="/Image/meta.png" alt="meta"></li>
+            <li><img src="/Image/microsoft.png" alt="microsoft"></li>
+            <li><img src="/Image/amazon.png" alt="amazon"></li>
+            <li><img src="/Image/apple.png" alt="apple"></li>
+            <li><img src="/Image/accenture.png" alt="accenture"></li>
+        </ul>
+    </div>
+    <div class="about">
+        <h3>Why go with ResumeFolio for resume building?</h3>
+        <ul class="feature">
+            <li class="free"><span class="font">&#128340;</span><h4>Save Your Time</h4><p>Quickly build a professional resume in a minutes, saving you valuable time.</p></li>
+            <li class="free"><span class="font">&#10004;</span><h4>Free and Easy to Use</h4><p>Resume.com offers a simple, user-friendly interface to create professional resumes at no cost.</p></li>
+            <li class="template"><span class="font">&#11088;</span><h4>Approved templates</h4><p>Professionally-designed resume templates and examples. Just edit and download in just one click.</p></li>
+        </ul>
+    </div>
     <footer>
         <div class="text">Copyright &#169 2024 Design by <a href="myResume.html">Afifa khan</a>. All Rights Reserved</div>
     </footer>
 </body>
+<script>
+    let loader = document.getElementById('loader')
+        window.addEventListener('load',function(){
+
+            loader.style.display='none'
+        })
+</script>
 </html>
